@@ -4,7 +4,8 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 #meeting-section, #join-section, #family-section{
-    padding: 5em 0 ;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 .header-title{
     font-weight: 900;
@@ -120,7 +121,12 @@ body{
     color: #8cfef4;
     border-bottom: solid 2px #8cfef4;
 }
-
+.desktop{
+    display: inline-block
+}
+.mobile{
+    display: none;
+}
 
 
 /*Meeting Area*/
@@ -130,6 +136,11 @@ body{
 }
 #meeting-section img{
     width:80%;
+}
+
+/*Join Area*/
+.facebook{
+    text-align: right;
 }
 
 
@@ -143,4 +154,29 @@ body{
 footer{
     color: #909090;
     font-size: 0.8em;
+}
+
+@media only screen and (max-width: 960px) {
+    .desktop{display: none}
+    .mobile{display: inline-block;}
+
+    nav.mobile {
+        padding-top: 0.5em;
+        text-align: right;
+    }
+    nav.mobile img{
+        width: 30%;
+    }
+    .main-img{
+        display: none;
+    }
+
+    section{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .facebook{
+    text-align: center;
+}
 }
