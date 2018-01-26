@@ -1,7 +1,14 @@
 /*COMMON*/
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 body{
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 #meeting-section, #join-section, #family-section{
     padding-top: 5em;
@@ -156,6 +163,14 @@ footer{
     font-size: 0.8em;
 }
 
+@media only screen and (max-width: 1140px) {
+    
+    /* This hides the Facebook embed as soon as the layout starts to break. */
+    .facebook {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 960px) {
     .desktop{display: none}
     .mobile{display: inline-block;}
@@ -179,4 +194,19 @@ footer{
     .facebook{
     text-align: center;
 }
+}
+
+@media only screen and (max-width: 426px) {
+    #header-section .header-title {
+        font-size: 4em;
+    }
+
+    #join-section .header-title, #family-section .header-title, #meeting-section .header-title {
+        margin-bottom: 0.5em;
+    }
+    
+    #join-section .header-title, #family-section .header-title, #meeting-section .header-subtitle {
+        margin-top: 1em;
+    }
+
 }
